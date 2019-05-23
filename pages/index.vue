@@ -1,35 +1,21 @@
 <template>
   <section class="container">
     <div>
-      <logo />
-      <h1 class="title">
-        codenames
-      </h1>
-      <h2 class="subtitle">
-        Webapp for playing codenames
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
-        >Documentation</a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >GitHub</a>
-      </div>
+      <board />
     </div>
   </section>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+import Board from '~/components/Board.vue'
 
 export default {
   components: {
-    Logo
+    Board
+  },
+
+  fetch({ store }) {
+    store.dispatch('setWords')
   }
 }
 </script>

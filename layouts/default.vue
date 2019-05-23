@@ -24,6 +24,10 @@ html {
   margin: 0;
 }
 
+body {
+  background: radial-gradient(ellipse at center, #7d7e7d 0%,#0e0e0e 65%);
+}
+
 .button--green {
   display: inline-block;
   border-radius: 4px;
